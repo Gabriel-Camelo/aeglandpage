@@ -650,38 +650,38 @@
     
         document.getElementById("leadForm").addEventListener("submit", async function(e) {
             e.preventDefault();
-          
+            
             const form = e.target;
             const data = {
-              nome: form.nome.value,
-              telefone: form.telefone.value,
-              email: form.email.value,
-              cidade: form.cidade.value,
-              veiculo: form.veiculo.value
+                nome: form.nome.value,
+                telefone: form.telefone.value,
+                email: form.email.value,
+                cidade: form.cidade.value,
+                veiculo: form.veiculo.value
             };
-          
+        
             try {
-              const response = await fetch("https://script.google.com/macros/s/AKfycbzU8pjCPxZXexDZNAxw52fd8jnyaLlkreidpsCQZsCn_Df7jx72NnxrMVy03SRAS2gF/exec", {
-                method: "POST",
-                body: JSON.stringify(data),
-                headers: {
-                  "Content-Type": "application/json"
+                const response = await fetch("https://sgfyorbgloojmvwuovay.supabase.co/rest/v1/leads", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNnZnlvcmJnbG9vam12d3VvdmF5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc0MDUyNTcsImV4cCI6MjA2Mjk4MTI1N30.fuM62-nJ0XXXA0Bd1jkYsGIOBmG1df3DYCJbmfZHHWo",
+                        "Authorization": "Bearer 98wK30JU2jaqAZZ9CaqKYZwBzRd4quyYLjGt3BrHUdqcQBmYoix/Ip0e00tfF2J3fMHbQcMNXUGdd9whPSiPAA=="
+                    },
+                    body: JSON.stringify(data)
+                });
+        
+                if (response.ok) {
+                    document.getElementById("status").classList.remove("hidden");
+                    form.reset();
+                } else {
+                    alert("Erro ao enviar. Tente novamente.");
                 }
-              });
-          
-              const result = await response.json();
-          
-              if (result.result === "Sucesso") {
-                document.getElementById("status").classList.remove("hidden");
-                form.reset();
-              } else {
-                alert("Erro ao enviar. Tente novamente.");
-              }
             } catch (error) {
-              console.error("Erro:", error);
-              alert("Erro na conexão. Verifique sua internet.");
+                console.error("Erro:", error);
+                alert("Erro na conexão.");
             }
-          });
+        });
         
         // FAQ toggle functionality
         document.querySelectorAll('.faq-toggle').forEach(button => {
