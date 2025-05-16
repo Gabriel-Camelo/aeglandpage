@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEG Proteção - Proteção Veicular Completa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+        }
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .car-animation {
+            animation: moveCar 8s infinite alternate;
+        }
+        @keyframes moveCar {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(20px);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-car text-blue-600 text-3xl mr-2"></i>
+                <span class="text-xl font-bold text-blue-800">AEG Proteção</span>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#beneficios" class="text-gray-700 hover:text-blue-600 font-medium">Benefícios</a>
+                <a href="#como-funciona" class="text-gray-700 hover:text-blue-600 font-medium">Como Funciona</a>
+                <a href="#depoimentos" class="text-gray-700 hover:text-blue-600 font-medium">Depoimentos</a>
+                <a href="#contato" class="text-gray-700 hover:text-blue-600 font-medium">Contato</a>
+            </nav>
+            <button class="md:hidden text-gray-700">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </header>
+    
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="fixed inset-0 z-[60] hidden">
+        <div id="mobileMenuBackdrop" class="absolute inset-0 bg-black opacity-0 transition-opacity duration-300"></div>
+        <div id="mobileMenuPanel" class="relative bg-white w-80 max-w-full h-full ml-auto transform transition-transform duration-300 translate-x-full shadow-xl">
+            <div class="p-4 flex justify-between items-center border-b">
+                <div class="flex items-center">
+                    <i class="fas fa-car text-blue-600 text-2xl mr-2"></i>
+                    <span class="text-xl font-bold text-blue-800">AEG Proteção</span>
+                </div>
+                <button id="closeMobileMenu" class="text-gray-600 hover:text-gray-800">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
+            <nav class="p-4 space-y-2">
+                <a href="#beneficios" class="block py-3 px-4 text-gray-700 hover:bg-blue-50 rounded-lg transition duration-200">Benefícios</a>
+                <a href="#como-funciona" class="block py-3 px-4 text-gray-700 hover:bg-blue-50 rounded-lg transition duration-200">Como Funciona</a>
+                <a href="#depoimentos" class="block py-3 px-4 text-gray-700 hover:bg-blue-50 rounded-lg transition duration-200">Depoimentos</a>
+                <a href="#contato" class="block py-3 px-4 text-gray-700 hover:bg-blue-50 rounded-lg transition duration-200">Contato</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-16 md:py-24">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+                    Proteção Veicular Completa <br> 
+                    <span class="text-blue-200">Sem Burocracia</span>
+                </h1>
+                <p class="text-xl mb-8 text-blue-100">
+                    Cobertura completa para seu veículo com planos acessíveis e sem análise de perfil.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#contato" class="bg-white text-blue-600 font-bold py-3 px-8 rounded-lg text-center hover:bg-blue-50 transition duration-300">
+                        Quero Proteção Agora
+                    </a>
+                    <a href="#beneficios" class="border border-white text-white font-bold py-3 px-8 rounded-lg text-center hover:bg-blue-700 transition duration-300">
+                        Conheça os Benefícios
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative">
+                    <img src="https://cdn-icons-png.flaticon.com/512/744/744465.png" alt="Carro protegido" class="w-64 h-64 car-animation">
+                    <div class="absolute -bottom-6 -right-6 bg-yellow-400 text-blue-900 font-bold py-2 px-4 rounded-lg shadow-lg">
+                        Economize até 60%
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badges -->
+    <div class="bg-gray-100 py-6">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+                <div class="flex items-center">
+                    <i class="fas fa-shield-alt text-blue-600 text-2xl mr-2"></i>
+                    <span class="font-medium">+50.000 veículos protegidos</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-headset text-blue-600 text-2xl mr-2"></i>
+                    <span class="font-medium">Atendimento 24h</span>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-map-marker-alt text-blue-600 text-2xl mr-2"></i>
+                    <span class="font-medium">Cobertura em todo Brasil</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Benefits Section -->
+    <section id="beneficios" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                    Proteção Completa para seu Veículo
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Conheça os benefícios exclusivos da AEG Proteção para carros e motos
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Benefit 1 -->
+                <div class="benefit-card bg-white rounded-xl shadow-md p-6 transition duration-300">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-car-crash text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Colisão e Fenômenos Naturais</h3>
+                    <p class="text-gray-600">
+                        Cobertura para danos causados por acidentes, chuvas fortes, granizo e outros fenômenos naturais.
+                    </p>
+                </div>
+                
+                <!-- Benefit 2 -->
+                <div class="benefit-card bg-white rounded-xl shadow-md p-6 transition duration-300">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-lock text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Roubo e Furto</h3>
+                    <p class="text-gray-600">
+                        Proteção completa contra roubo e furto do seu veículo, com indenização conforme tabela FIPE.
+                    </p>
+                </div>
+                
+                <!-- Benefit 3 -->
+                <div class="benefit-card bg-white rounded-xl shadow-md p-6 transition duration-300">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-ambulance text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Assistência 24h</h3>
+                    <p class="text-gray-600">
+                        Reboque, chaveiro, troca de pneu e socorro mecânico disponíveis 24 horas por dia, 7 dias por semana.
+                    </p>
+                </div>
+                
+                <!-- Benefit 4 -->
+                <div class="benefit-card bg-white rounded-xl shadow-md p-6 transition duration-300">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-users text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Proteção para Terceiros</h3>
+                    <p class="text-gray-600">
+                        Cobertura para danos materiais e corporais causados a terceiros em acidentes.
+                    </p>
+                </div>
+                
+                <!-- Benefit 5 -->
+                <div class="benefit-card bg-white rounded-xl shadow-md p-6 transition duration-300">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-motorcycle text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Carros e Motos</h3>
+                    <p class="text-gray-600">
+                        Planos especiais tanto para carros quanto para motocicletas, com coberturas adaptadas.
+                    </p>
+                </div>
+                
+                <!-- Benefit 6 -->
+                <div class="benefit-card bg-white rounded-xl shadow-md p-6 transition duration-300">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-wallet text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Valores Acessíveis</h3>
+                    <p class="text-gray-600">
+                        Mensalidades que cabem no seu bolso, sem análise de crédito ou perfil do condutor.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="como-funciona" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                    Como Funciona a AEG Proteção
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Simples, rápido e sem burocracia para você proteger seu veículo
+                </p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3710/3710300.png" alt="Processo simples" class="w-64 mx-auto">
+                </div>
+                <div class="md:w-1/2">
+                    <div class="space-y-8">
+                        <!-- Step 1 -->
+                        <div class="flex">
+                            <div class="flex-shrink-0 mr-4">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-full bg-blue-100 text-blue-600">
+                                    <span class="text-xl font-bold">1</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-800 mb-2">Preencha o formulário</h3>
+                                <p class="text-gray-600">
+                                    Informe seus dados básicos e do seu veículo para começarmos.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 2 -->
+                        <div class="flex">
+                            <div class="flex-shrink-0 mr-4">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-full bg-blue-100 text-blue-600">
+                                    <span class="text-xl font-bold">2</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-800 mb-2">Receba uma proposta</h3>
+                                <p class="text-gray-600">
+                                    Nossa equipe entrará em contato com a melhor proposta para seu perfil.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 3 -->
+                        <div class="flex">
+                            <div class="flex-shrink-0 mr-4">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-full bg-blue-100 text-blue-600">
+                                    <span class="text-xl font-bold">3</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-800 mb-2">Assine digitalmente</h3>
+                                <p class="text-gray-600">
+                                    Assine seu contrato de forma 100% digital, sem papelada.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Step 4 -->
+                        <div class="flex">
+                            <div class="flex-shrink-0 mr-4">
+                                <div class="flex items-center justify-center h-12 w-12 rounded-full bg-blue-100 text-blue-600">
+                                    <span class="text-xl font-bold">4</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-800 mb-2">Esteja protegido</h3>
+                                <p class="text-gray-600">
+                                    Seu veículo estará protegido imediatamente após a confirmação.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="depoimentos" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                    O que nossos associados dizem
+                </h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Veja a experiência de quem já conta com a proteção da AEG
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 rounded-xl p-8 shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0 mr-4">
+                            <img class="h-12 w-12 rounded-full" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Depoimento">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Ana Carolina</h4>
+                            <p class="text-gray-500 text-sm">São Paulo/SP</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "Quando meu carro foi atingido por granizo, a AEG Proteção resolveu tudo rapidamente. O processo foi muito simples e o conserto foi feito em uma oficina credenciada de qualidade. Recomendo demais!"
+                    </p>
+                    <div class="mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 rounded-xl p-8 shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="flex-shrink-0 mr-4">
+                            <img class="h-12 w-12 rounded-full" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Depoimento">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Roberto Almeida</h4>
+                            <p class="text-gray-500 text-sm">Belo Horizonte/MG</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">
+                        "Depois de pagar caro por um seguro tradicional por anos, descobri a AEG Proteção. A economia foi enorme e a cobertura é excelente. Quando precisei do reboque, o atendimento foi impecável e rápido. Não troco por nada!"
+                    </p>
+                    <div class="mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-blue-600 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                Proteja seu veículo hoje mesmo!
+            </h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">
+                Preencha o formulário e nossa equipe entrará em contato com a melhor proposta para você.
+            </p>
+            <a href="#contato" class="bg-white text-blue-600 font-bold py-3 px-8 rounded-lg inline-block hover:bg-blue-50 transition duration-300">
+                Quero minha proposta
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contato" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-md overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 bg-blue-600 text-white p-8">
+                        <h2 class="text-2xl font-bold mb-4">Fale conosco</h2>
+                        <p class="mb-6">
+                            Preencha o formulário ao lado e nossa equipe entrará em contato em até 24 horas úteis.
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <i class="fas fa-phone-alt mr-3"></i>
+                                <span>(11) 4004-1234</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-envelope mr-3"></i>
+                                <span>contato@aegprotecao.com.br</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-clock mr-3"></i>
+                                <span>Atendimento: Seg-Sex 8h-18h</span>
+                            </div>
+                        </div>
+                        <div class="mt-8">
+                            <h3 class="font-bold mb-2">Siga a AEG Proteção</h3>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-white hover:text-blue-200">
+                                    <i class="fab fa-facebook-f text-xl"></i>
+                                </a>
+                                <a href="#" class="text-white hover:text-blue-200">
+                                    <i class="fab fa-instagram text-xl"></i>
+                                </a>
+                                <a href="#" class="text-white hover:text-blue-200">
+                                    <i class="fab fa-linkedin-in text-xl"></i>
+                                </a>
+                                <a href="#" class="text-white hover:text-blue-200">
+                                    <i class="fab fa-whatsapp text-xl"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 p-8">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-6">Solicite uma proposta</h2>
+                        <form id="leadForm" class="space-y-4">
+                            <div>
+                                <label for="nome" class="block text-gray-700 font-medium mb-1">Nome completo*</label>
+                                <input type="text" id="nome" name="nome" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                            <div>
+                                <label for="telefone" class="block text-gray-700 font-medium mb-1">Telefone*</label>
+                                <input type="tel" id="telefone" name="telefone" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-700 font-medium mb-1">E-mail</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                            <div>
+                                <label for="cidade" class="block text-gray-700 font-medium mb-1">Cidade*</label>
+                                <input type="text" id="cidade" name="cidade" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                            <div>
+                                <label for="veiculo" class="block text-gray-700 font-medium mb-1">Tipo de veículo*</label>
+                                <select id="veiculo" name="veiculo" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                                    <option value="">Selecione</option>
+                                    <option value="carro">Carro</option>
+                                    <option value="moto">Moto</option>
+                                </select>
+                            </div>
+                            <div class="pt-2">
+                                <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 px-4 rounded-lg hover:bg-blue-700 transition duration-300">
+                                    Solicitar proposta
+                                </button>
+                            </div>
+                            <p class="text-sm text-gray-500">
+                                * Campos obrigatórios. Ao enviar, você concorda com nossos <a href="#" class="text-blue-600 hover:underline">Termos de Uso</a> e <a href="#" class="text-blue-600 hover:underline">Política de Privacidade</a>.
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                    Perguntas frequentes
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Tire suas dúvidas sobre a AEG Proteção
+                </p>
+            </div>
+            
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-toggle w-full flex justify-between items-center p-4 text-left bg-gray-50 hover:bg-gray-100">
+                        <span class="font-medium text-gray-800">Qual a diferença entre proteção veicular e seguro tradicional?</span>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden p-4 text-gray-600">
+                        <p>
+                            A proteção veicular é oferecida por uma associação de membros, onde os recursos são compartilhados entre os associados, resultando em custos menores. Diferente do seguro tradicional, não há análise de perfil do condutor e os processos são mais simples e ágeis, mantendo coberturas similares.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-toggle w-full flex justify-between items-center p-4 text-left bg-gray-50 hover:bg-gray-100">
+                        <span class="font-medium text-gray-800">Quanto tempo leva para minha proteção começar a valer?</span>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden p-4 text-gray-600">
+                        <p>
+                            Sua proteção começa imediatamente após a confirmação do pagamento da primeira mensalidade e a assinatura digital do contrato. Em casos de renovção, a cobertura é contínua sem interrupções.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-toggle w-full flex justify-between items-center p-4 text-left bg-gray-50 hover:bg-gray-100">
+                        <span class="font-medium text-gray-800">Posso cancelar a qualquer momento?</span>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden p-4 text-gray-600">
+                        <p>
+                            Sim, você pode cancelar a qualquer momento sem multa ou penalidade. Basta nos avisar com antecedência de 30 dias para que possamos encerrar sua participação na associação.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-toggle w-full flex justify-between items-center p-4 text-left bg-gray-50 hover:bg-gray-100">
+                        <span class="font-medium text-gray-800">Como funciona a assistência 24 horas?</span>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden p-4 text-gray-600">
+                        <p>
+                            Nossa central de atendimento funciona 24h por dia, 7 dias por semana. Em caso de necessidade, basta ligar para o número informado em sua apólice e nossa equipe irá acionar os serviços necessários (reboque, chaveiro, socorro mecânico, etc.) imediatamente.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 5 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-toggle w-full flex justify-between items-center p-4 text-left bg-gray-50 hover:bg-gray-100">
+                        <span class="font-medium text-gray-800">Quais documentos preciso para me associar?</span>
+                        <i class="fas fa-chevron-down text-blue-600 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden p-4 text-gray-600">
+                        <p>
+                            Você precisará enviar cópia do RG, CPF, comprovante de residência e documentos do veículo (CRLV e foto do veículo). Todo o processo é feito digitalmente, sem necessidade de enviar documentos físicos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-car text-blue-400 text-2xl mr-2"></i>
+                        <span class="text-xl font-bold">AEG Proteção</span>
+                    </div>
+                    <p class="text-gray-400">
+                        Proteção veicular completa, simples e acessível para todo Brasil.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Links úteis</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Termos de uso</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Política de privacidade</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Trabalhe conosco</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Seja um parceiro</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Atendimento</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-2 text-sm"></i>
+                            (11) 4004-1234
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-sm"></i>
+                            contato@aegprotecao.com.br
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2 text-sm"></i>
+                            Av. Paulista, 1000 - São Paulo/SP
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Siga-nos</h3>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="bg-gray-700 hover:bg-blue-600 w-10 h-10 rounded-full flex items-center justify-center">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="bg-gray-700 hover:bg-pink-600 w-10 h-10 rounded-full flex items-center justify-center">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="bg-gray-700 hover:bg-blue-400 w-10 h-10 rounded-full flex items-center justify-center">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="bg-gray-700 hover:bg-green-500 w-10 h-10 rounded-full flex items-center justify-center">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                    <p class="text-gray-400 text-sm">
+                        Receba nossas novidades:
+                    </p>
+                    <div class="flex mt-2">
+                        <input type="email" placeholder="Seu e-mail" class="px-3 py-2 bg-gray-700 text-white rounded-l-lg focus:outline-none w-full">
+                        <button class="bg-blue-600 hover:bg-blue-700 px-4 rounded-r-lg">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>
+                    © 2023 AEG Proteção. Todos os direitos reservados.
+                </p>
+                <p class="text-sm mt-2">
+                    AEG Proteção é uma associação de proteção veicular. Não somos uma seguradora.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="#" class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition duration-300 z-50">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileMenuBackdrop = document.getElementById('mobileMenuBackdrop');
+        const mobileMenuPanel = document.getElementById('mobileMenuPanel');
+        const hamburgerButton = document.querySelector('button.md\\:hidden');
+        const closeMobileMenuButton = document.getElementById('closeMobileMenu');
+
+        function openMobileMenu() {
+            mobileMenu.classList.remove('hidden');
+            setTimeout(() => {
+                mobileMenuBackdrop.classList.add('opacity-50');
+                mobileMenuPanel.classList.remove('translate-x-full');
+            }, 10);
+        }
+
+        function closeMobileMenu() {
+            mobileMenuBackdrop.classList.remove('opacity-50');
+            mobileMenuPanel.classList.add('translate-x-full');
+            setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+            }, 300);
+        }
+
+        // Event Listeners
+        hamburgerButton.addEventListener('click', openMobileMenu);
+        closeMobileMenuButton.addEventListener('click', closeMobileMenu);
+        mobileMenuBackdrop.addEventListener('click', closeMobileMenu);
+
+        // Close menu when clicking on links
+        document.querySelectorAll('#mobileMenu nav a').forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+    
+        // Form submission
+        document.getElementById('leadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const nome = document.getElementById('nome').value;
+            const telefone = document.getElementById('telefone').value;
+            const cidade = document.getElementById('cidade').value;
+            
+            // Here you would typically send this data to your backend
+            // For this example, we'll just show an alert
+            alert(`Obrigado, ${nome}! Nossa equipe entrará em contato pelo telefone ${telefone} para enviar sua proposta.`);
+            
+            // Reset form
+            this.reset();
+        });
+        
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                
+                content.classList.toggle('hidden');
+                icon.classList.toggle('transform');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
